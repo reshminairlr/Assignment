@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Goodreads</title>
+
+    <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+    <link rel='stylesheet' href='css/login.css'>
+
+</head>
+<body> <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="/">Goodreads.com!</a>
+        
+          <!-- Collapse button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="basicExampleNav">
+        
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/login">Log In
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/signup">Sign Up</a>
+              </li>
+
+      
+        
+            </ul>
+            <!-- Links -->
+        
+
+          </div>
+          <!-- Collapsible content -->
+        
+  </nav>
+  <!--Navbar-->
+  <br>
+  
+
+ 
+        
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+          <div class="col-md-8 col-lg-7 col-xl-6">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="image">
+
+          </div>
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form  action="/login/check" onsubmit="return validate()" method="GET">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input id="uid" name="uid" type="email" class="form-control form-control-lg" />
+                <label class="form-label" for="form1Example13">Email address</label>
+              </div>
+    
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input id="pwd" name="pwd" type="password" class="form-control form-control-lg" />
+                <label class="form-label" for="form1Example23">Password</label>
+              </div>
+    
+              <div class="d-flex justify-content-around align-items-center mb-4">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="form1Example3"
+                    checked
+                  />
+                  <label class="form-check-label" for="form1Example3"> Remember me </label>
+                </div>
+                <a href="#!">Forgot password?</a>
+              </div>
+    
+              <!-- Submit button -->
+              <button type="login" id="login"class="btn btn-primary btn-lg btn-block">Login</button>
+    
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark pt-2 fixed-bottom">
+
+
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+          <a href="/">Goodreads.com</a>
+        </div>
+        <!-- Copyright -->
+  
+    </footer>
+    <!-- Footer end-->
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+              
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="js/login.js"></script>
+
+    <!-- <script>
+      $("#login").click(function(e){
+          e.preventDefault();
+          alert("Are you sure you want to log in?");
+          
+          const data = {
+              "uid": $('#uid').val(),
+              "pwd": $('#pwd').val(),
+      
+          }
+      
+        $.ajax
+        ({
+          url: `/login/check`,
+        method:'post', 
+        data:JSON.stringify(data),
+        contentType:"application/json",
+        success: function(result){
+            alert("new author added successfully");
+          window.location = "/authors";
+          console.log(result);
+          }
+          });
+
+        });
+
+  </script> -->
+
+</body>
+</html>

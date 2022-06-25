@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(65, 63, 63);
+    background-size: cover;
+    
+  }
+
+  .navbar{
+    background:rgb(102, 36, 36);
+    opacity: .75;
+    
+    width:100%;
+}
+
+
+
+.carousel-item{
+
+    height: 100vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+
+    
+}
+
+
+.carousel-caption{
+    bottom: 270px;
+    opacity: 75%;
+}
+
+
+.carousel-caption h5{
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: rgb(185, 156, 142);    
+}
+
+
+.carousel-caption h4{
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+footer{
+  
+    color: rgb(3, 1, 1);
+    background: rgb(32, 31, 31);
+    opacity:.75 !important;
+    
+  }
+a{
+    color: white;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: white;
+}
